@@ -18,18 +18,19 @@ import com.selland.model.Meal;
 import com.selland.util.MealUtil;
 import com.selland.util.MealAdvisorConstants;
 
+/*
+ * This handler handles requests for today's "date"
+ */
 public class MealAdvisorIntentHandler implements RequestHandler {
 
-	// This is the message a user will hear after they ask (and hear) about a specific meal
+	// This is the follow-on message a user will hear after they ask (and hear) about a specific meal
     public static String REPROMPT_MESSAGE = "Are there any other meals you would like to hear about?";
     
 	public boolean canHandle(HandlerInput input) {
 	    return input.matches(intentName("MealAdvisorIntent").or(intentName("AMAZON.YesIntent")));
 	}
 	
-	/* 
-	 * This handler only handles request for today's "date"
-	 */
+
 	public Optional<Response> handle(HandlerInput input) {
 		Optional<Response> response;
 	       

@@ -11,6 +11,8 @@ import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 
 /**
  * The main access to the Meal table data store.
+ *
+ * The MealTable asynchronously receives and stores meal data for a user
  */
 public class MealTableGateway {
 	
@@ -37,11 +39,10 @@ public class MealTableGateway {
 	}
 
 	// Leave in for posterity sake - we're not persisting MealSets via this code
-//	public MealSet buildMealSet(String requestId, String evaluationId, String recorderSN, int nbrMealsPerDay, int nbrDays) {
+//	public MealSet buildMealSet(String requestId, String id, int nbrMealsPerDay, int nbrDays) {
 //		MealSet mealSet = new MealSet();
 //		mealSet.setRequestId(requestId);
-//		mealSet.setEvaluationId(evaluationId);
-//		mealSet.setRecorderSerialNumber(recorderSN);
+//		mealSet.setId(id);
 //		for (int i = 0; i < nbrDays * nbrMealsPerDay; i++) {
 //			
 //			Meal meal = new Meal(mealEvent.getType(), mealEvent.getUniqueId(), mealEvent.getTimestamp(),

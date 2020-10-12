@@ -63,14 +63,14 @@ public class DayOfWeekMealAdvisorIntentHandler implements RequestHandler {
 	       return response;
 	}
 
-    public Optional<String> getDayOfWeekUtterance(Map<String, Slot> slots, LambdaLogger logger) {
+    private Optional<String> getDayOfWeekUtterance(Map<String, Slot> slots, LambdaLogger logger) {
 
     	for (Slot slot : slots.values()) {
         	
             String slotName = slot.getName();
             String slotValue = slot.getValue();
-            logger.log("DayOfWeekMealAdvisorIntentHandler : Slot name = " + slotName);
-            logger.log("DayOfWeekMealAdvisorIntentHandler : Slot value = " + slotValue);
+//            logger.log("DayOfWeekMealAdvisorIntentHandler : Slot name = " + slotName);
+//            logger.log("DayOfWeekMealAdvisorIntentHandler : Slot value = " + slotValue);
             
             if (slotName.equalsIgnoreCase("dayofWeek")) {
 	    		logger.log("Processing day of week Slot: " + new Gson().toJson(slot));

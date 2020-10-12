@@ -98,31 +98,13 @@ public class DateMealAdvisorIntentHandler implements RequestHandler {
        return response;
 	}
 	
-	private String formulateResponseSpeechText(String mealName, LocalDate date) {
-		String response = "";
-		
-		// Find the meal most likely to be referenced by the given date.
-		// Interrogate the meal data and formulate a response
-		
-//		List<MealSet> meals = MealTableGateway.getMeals("a8336657-1598-4106-8b16-a482ce0ec7c4");
-		
-		 // this would be replaced by an actual Meal grade
-		char grade = MealUtil.getRandomLetterGrade();
-		
-		response = MealUtil.getMealGradeResponse(grade, mealName, date);
-		String advice = MealUtil.getRandomGradeAdvice(grade);
-		response += advice;
-	       
-		return response;
-	}
-	
-	
     public Optional<String> getDate(Map<String, Slot> slots, LambdaLogger logger) {
 
     	for (Slot slot : slots.values()) {
         	
             String slotName = slot.getName();
             String slotValue = slot.getValue();
+
 //            logger.log("Slot name = " + slotName);
 //            logger.log("Slot value = " + slotValue);
             

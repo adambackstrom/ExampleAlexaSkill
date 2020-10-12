@@ -71,21 +71,18 @@ public class MealUtil {
         }
         return Optional.empty();
     }
-  
-	public static String formulateResponseSpeechText(String mealName, String dayOfWeekUtterance) {
-		String response = "";
-		
-		// Find the meal most likely to be referenced by the given date if given.
-		// Interrogate the meal data and formulate a response
 
-		// find the meal in the List that matches with the given dayOfWeekUtterance based on
-		// the reference day of now()
+	// Find the meal most likely to be referenced by the given date if given.
+	// Interrogate the meal data and formulate a response
+	public static String formulateResponseSpeechText(String mealName, String dayOfWeekUtterance) {
+
+		// find the meal in the Meal Table that matches with the given dayOfWeekUtterance
 //		List<MealSet> meals = MealTableGateway.getMeals("a8336657-1598-4106-8b16-a482ce0ec7c4");
 
-		 // this would be replaced by an actual Meal grade
+		 // this would be replaced by an actual Meal grade calculation
 		char grade = MealUtil.getRandomLetterGrade();
-		
-		response = MealUtil.getMealGradeResponse(grade, mealName, dayOfWeekUtterance);
+
+		String response = MealUtil.getMealGradeResponse(grade, mealName, dayOfWeekUtterance);
 		String advice = MealUtil.getRandomGradeAdvice(grade);
 		response += advice;
 	       
