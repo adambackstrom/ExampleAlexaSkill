@@ -12,7 +12,6 @@ public class SellandStreamHandler extends SkillStreamHandler {
 		super(getSkill());
 	}
 	
-    @SuppressWarnings("unchecked")
 	private static Skill getSkill() {
         return Skills.standard()
                 .withSkillId("amzn1.ask.skill.d7e4998c-c135-4ac6-9d06-62f784ac6d19")

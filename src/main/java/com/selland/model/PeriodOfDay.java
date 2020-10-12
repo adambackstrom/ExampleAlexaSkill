@@ -1,8 +1,9 @@
 package com.selland.model;
-
+/**
+ * This enum is as of yet unused but will be when and if the TimeOfDayMealAdvisorIntentHandler is implemented
+ */
 public enum PeriodOfDay {
 
-	// ID, Value
 	MORNING("morning", "morning"),
 	AFTERNOON("afternoon", "afternoon"),
 	EVENING("evening", "evening");

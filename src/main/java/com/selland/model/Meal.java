@@ -6,7 +6,8 @@ public enum Meal {
 	LUNCH("lunch", "lunch"),
 	DINNER("dinner", "dinner"),
 	SNACK("snack", "snack"),
-	LAST("last", "last meal");
+	LAST("last", "last meal"),
+	PREVIOUS("previous", "previous meal");
 	
 	private String id;
 	private String name;
